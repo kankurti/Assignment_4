@@ -1,0 +1,26 @@
+
+1. Create a new GitHub repository.
+Clone the repository to your local machine using SSH (generate an SSH key if needed, add the public key to your GitHub account).
+1.1:ls -al ~/.ssh  (check whether we already have ssh key)
+1.2: ssh-keygen -t ed25519 -C "your_email@example.com" -f "C:\Users\Abdul\.ssh\github_key"(generates SSH key)
+1.3: eval "$(ssh-agent -s)"    (Start SSH agent)
+1.4: ssh-add "C:\Users\Abdul\.ssh\github_key"   (add SSH key to agent)
+1.5: cat "C:\Users\Abdul\.ssh\github_key.pub"  (add public key to Github)
+    # Copy the entire key (starts with ssh-ed25519 or ssh-rsa).
+     #Go to GitHub → Settings → SSH and GPG keys
+     #Click New SSH key
+     #Give it a title (like “Windows-PC”)
+      #Paste the key and click Add SSH key
+1.6: ssh-add -l     (we can verify it)
+1.7: ssh -T git@github.com   (check connections in it)
+1.8: git clone git@github.com:kankurti/Assignment_4.git  (clone the repository)
+
+Create a new branch named after your username (e.g., Tutedude).
+# git branch Tutedude   (created Tutedude branch)
+Add your Flask project files to this branch.
+# git add . (added all files in this branch)
+# git commit -m
+# git push –all -u  (pushes all branch and code)
+Commit the changes and merge the branch into the main branch.
+# git checkout main (go to main branch)
+# git merge Tutedude (merge in main branch)

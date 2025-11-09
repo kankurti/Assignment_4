@@ -19,7 +19,7 @@ Create a new branch named after your username (e.g., Tutedude).
 # git branch Tutedude   (created Tutedude branch)
 Add your Flask project files to this branch.
 # git add . (added all files in this branch)
-# git commit -a
+# git commit -m
 # git push –all -u  (pushes all branch and code)
 Commit the changes and merge the branch into the main branch.
 # git checkout main (go to main branch)
